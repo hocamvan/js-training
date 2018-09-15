@@ -5,7 +5,13 @@
  * much like in primitive.js
  *
  * @notions Functions, Operators
- */
+ */const obj =
+ {
+     str:"1337",
+     num: 42,
+     bool: false,
+     undef: undefined
+ };
 
 // Your code :
 
