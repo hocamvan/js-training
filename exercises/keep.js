@@ -12,9 +12,25 @@
  *
  */
 
+function keepFirst(params) {
+    return params.substring(0,2);
+}
+
+function keepLast(params) {
+    return params.substring(params.length - 2, params.length);
+}
+
+function keepFirstLast(params) {
+    return params.substring(2,4);;
+}
+
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+
+assert.strictEqual(keepFirst("ABCDE"), "AB")
+assert.strictEqual(keepLast("ABCDE"), "DE")
+assert.strictEqual(keepFirstLast("ABCDE"), "CD")
 // End of tests */

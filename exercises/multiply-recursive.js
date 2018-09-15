@@ -10,7 +10,39 @@
  */
 
 // Your code :
+function multiply(a, b) {
+    if (a >= 0) {
+        return multiplyNumber1Positive(a, b);
+    } else {
+        if (b >= 0) {
+            return multiplyNumber1Positive(b, a);
+        } else {
+            return multiplyNumberNegatifs(a, b);
 
+        }
+    }
+}
+
+function multiplyNumberNegatifs(a, b) {
+    if (a === -1) {
+        return 0-b;
+    }
+    if (a === 0) {
+        return 0;
+    }
+    return multiplyNumberNegatifs(a + 1, b) - b;
+
+}
+
+function multiplyNumber1Positive(a, b) {
+    if (a === 1) {
+        return b;
+    }
+    if (a === 0) {
+        return 0;
+    }
+    return multiplyNumber1Positive(a - 1, b) + b;
+}
 //* Begin of tests
 const assert = require('assert')
 

@@ -9,6 +9,35 @@
  */
 
 // Your code :
+function multiply(number1, number2) {
+
+    if (number1 >= 0) {
+        return multiplyNumber1Positive(number1, number2);
+    } else {
+        if (number2 >= 0) {
+            return multiplyNumber1Positive(number2, number1);
+        } else {
+            let result = 0;
+            for (let i = 0; i > number1; i--) {
+                result -= number2;
+
+            }
+            return result;
+
+        }
+    }
+}
+
+function multiplyNumber1Positive(number1, number2) {
+
+
+    let result = 0;
+    for (let i = 0; i < number1; i++) {
+        result += number2;
+
+    }
+    return result;
+}
 
 //* Begin of tests
 const assert = require('assert')
